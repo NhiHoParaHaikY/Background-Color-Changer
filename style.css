@@ -54,7 +54,7 @@ button {
     cursor: pointer;
     box-shadow: 4px 8px 12px rgba(0, 0, 0, 0.3); */
 
-body {
+/* body {
     background-color: rgb(186, 78, 240);
     height: 50vh;
 
@@ -76,5 +76,19 @@ h1 {
 }
 
 #myNumber {
+    border-radius: 7px;
+} */
+
+body {
+    background-color: lightcoral;
+
+}
+#num {
+    border-radius: 7px;
+}
+#number {
+    border-radius: 7px;
+}
+#operator {
     border-radius: 7px;
 }

@@ -108,40 +108,63 @@
 //     console.log(input.value);
 // });
 
-let number1 = document.getElementById("myNum");
-let number2 = document.getElementById("myNumber");
+// let number1 = document.getElementById("myNum");
+// let number2 = document.getElementById("myNumber");
+// let button = document.getElementById("myButton");
+// let heading = document.getElementById("heading");
+
+// number1.addEventListener("click", function () {
+//     number1.style.backgroundColor = "lightblue";
+// })
+// number1.addEventListener("mouseout", function () {
+//     number1.style.backgroundColor = "white";
+// })
+// number1.addEventListener("mouseover", function () {
+//     number1.style.backgroundColor = "lightblue";
+// })
+
+// number2.addEventListener("click", function () {
+//     number2.style.backgroundColor = "lightblue";
+// })
+// number2.addEventListener("mouseout", function () {
+//     number2.style.backgroundColor = "white";
+// })
+// number2.addEventListener("mouseover", function () {
+//     number2.style.backgroundColor = "lightblue";
+// })
+// button.addEventListener("mouseout", function () {
+//     button.style.backgroundColor = "white";
+// })
+// button.addEventListener("mouseover", function () {
+//     button.style.backgroundColor = "lightgreen";
+// })
+// button.addEventListener("click", function () {
+//     button.style.backgroundColor = "lightgreen";
+//     let num1 = Number(number1.value);
+//     let num2 = Number(number2.value);
+//     let sum = Number(num1) + Number(num2);
+//     heading.textContent = ("Sum:" + sum);
+// });
+
+let number1 = document.getElementById("num");
+let operator = document.getElementById("operator");
+let number2 = document.getElementById("number");
 let button = document.getElementById("myButton");
 let heading = document.getElementById("heading");
 
-number1.addEventListener("click", function () {
-    number1.style.backgroundColor = "lightblue";
-})
-number1.addEventListener("mouseout", function () {
-    number1.style.backgroundColor = "white";
-})
-number1.addEventListener("mouseover", function () {
-    number1.style.backgroundColor = "lightblue";
-})
-
-number2.addEventListener("click", function () {
-    number2.style.backgroundColor = "lightblue";
-})
-number2.addEventListener("mouseout", function () {
-    number2.style.backgroundColor = "white";
-})
-number2.addEventListener("mouseover", function () {
-    number2.style.backgroundColor = "lightblue";
-})
-button.addEventListener("mouseout", function () {
-    button.style.backgroundColor = "white";
-})
-button.addEventListener("mouseover", function () {
-    button.style.backgroundColor = "lightgreen";
-})
 button.addEventListener("click", function () {
     button.style.backgroundColor = "lightgreen";
     let num1 = Number(number1.value);
     let num2 = Number(number2.value);
-    let sum = Number(num1) + Number(num2);
-    heading.textContent = ("Sum:" + sum);
+    let sum;
+    if (operator.value === "+") {
+        sum = num1 + num2;
+    } else if (operator.value === "-") {
+        sum = num1 - num2;
+    } else if (operator.value === "*") {
+        sum = num1 * num2;
+    } else if (operator.value === "/") {
+        sum = num1 / num2;
+    }
+    heading.textContent = ("Result:" + sum);
 });
